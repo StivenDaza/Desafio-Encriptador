@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="contenido">
+            <h1>Encriptador de Texto</h1>
+            
+            <!-- Mensaje de advertencia -->
+            <p class="mensaje-info">
+                Solo se permiten letras minúsculas sin acentos ni caracteres especiales.
+            </p>
+
+            <textarea id="inputTexto" placeholder="Ingresa el texto aquí" rows="4"></textarea><br>
+            
+            <button onclick="encriptar()">Encriptar</button>
+            <button onclick="desencriptar()">Desencriptar</button><br>
+            
+            <h2>Resultado:</h2>
+            <textarea id="outputTexto" readonly rows="4"></textarea><br>
+            
+            <button id="copiar" onclick="copiarTexto()">Copiar al Portapapeles</button>
+        </div>
+    </div>
+
+    <!-- Imágenes de fondo -->
+    <img src="img/Designerizquierda.jpeg" alt="Imagen Izquierda" class="imagen-izquierda">
+    <img src="img/Designerderecha.jpeg" alt="Imagen Derecha" class="imagen-derecha">
+
+    <script src="scripts.js"></script>
+</body>
+</html>

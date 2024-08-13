@@ -1,0 +1,118 @@
+/* Reseteo básico de márgenes y rellenos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Evita el scroll horizontal si las imágenes están fuera del contenedor */
+}
+
+/* Imagen a la izquierda */
+.imagen-izquierda {
+    position: fixed; /* Mantiene la imagen fija en su lugar */
+    top: 0;
+    left: 0;
+    width: 50vw; /* Ocupa la mitad del ancho de la ventana */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    object-fit: cover; /* Asegura que la imagen cubra todo el área sin distorsión */
+    z-index: -1; /* Asegura que la imagen esté detrás del contenedor */
+}
+
+/* Imagen a la derecha */
+.imagen-derecha {
+    position: fixed; /* Mantiene la imagen fija en su lugar */
+    top: 0;
+    right: 0;
+    width: 50vw; /* Ocupa la mitad del ancho de la ventana */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    object-fit: cover; /* Asegura que la imagen cubra todo el área sin distorsión */
+    z-index: -1; /* Asegura que la imagen esté detrás del contenedor */
+}
+
+/* Contenedor principal */
+.container {
+    position: relative; /* Establece el contenedor como relativo para que el contenido se posicione en relación con él */
+    width: 60%; /* Ajusta el ancho del contenedor según sea necesario */
+    max-width: 600px; /* Ajusta el ancho máximo del contenedor */
+    padding: 20px;
+    background: #d2e5ec;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* Asegura que el contenedor esté sobre las imágenes */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo del contenido */
+.contenido {
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté sobre las imágenes */
+    background: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente para el contenido */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 100%; /* Asegura que el contenido no exceda el ancho del contenedor */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+/* Estilo del título */
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo del mensaje informativo */
+.mensaje-info {
+    color: #e74c3c; /* Rojo para advertencia */
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* Estilo de las áreas de texto */
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    resize: none; /* Evita que se redimensione */
+}
+
+/* Estilo de los botones */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Botón de copiar al portapapeles */
+button#copiar {
+    background-color: #28a745;
+}
+
+button#copiar:hover {
+    background-color: #218838;
+}
